@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LIGHT</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body class="body-white">
+
+<nav class="navbar gray">
+
+<a class="icon" href="index.html" >
+    <img class="img-logo" src="imgs/logo (2).png">
+</a>
+
+    <label for="checkbox_toggle" class="hamburger gray">&#9776;</label>
+    <input type="checkbox" id="checkbox_toggle"/>
+
+<ul class="navbar-list-light">
+    <li class="li-navbar">
+        <a class="light-a gray" href="index.html">HOME</a>
+    </li>
+    <li class="li-navbar">
+        <a class="light-a active-black" href="light.html">LIGHT</a>
+    </li>
+    <li class="li-navbar">
+        <a class="light-a gray" href="colors.html">COLORS</a>
+    </li>
+    <li class="li-navbar">
+        <a class="light-a gray" href="ideas.html">IDEAS</a>
+    </li>
+</ul>
+
+</nav>
+
+<div class="MainPage">
+
+    <img class="site-image spacing-top" src="imgs/light.png">
+
+
+    <p class="spacing-top text-justify gray medium">Ever felt frustrated having worked so hard on a drawing  only to find it still looks flat? Is it the proportions? The perspective? Perhaps the composition? Whilst these all play an integral part, the most effective method of making your drawings appear three dimensional, is understanding how light logic works.</p>
+
+        <img class="mySlides site-image2" src="imgs/light1.png">
+        <img class="mySlides site-image2" src="imgs/light2.png">
+        <img class="mySlides site-image2" src="imgs/light3.png">
+
+
+    <p class="text-justify gray medium">Light always travels in a straight line. The shadows that are made by the light are always in a direct response to whatever the light hits, whatever angle the light is coming from and the intensity of the light source. So if bright, high sunshine hits a tree directly from above, it makes a short shadow shape, that doesn’t necessarily help you as an artist to describe the subject. Later in the day when the sun is very low, it will make a longer, more interesting shadow shape, usually more representative of the essence of the tree and the presence of light. If a single light hits a cube, it will make a square shape – if a single light hits a sphere, an ellipse shape. This is called ‘light logic’ and the shadow produced is called a Cast Shadow.</p>
+</div>
+
+<script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex-1].style.display = "block";
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+</script>
+
+</body>
+</html>

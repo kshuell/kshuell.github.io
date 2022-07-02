@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>COLORS</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<nav class="navbar black">
+
+    <a class="icon" href="index.html" >
+        <img class="img-logo" src="imgs/logo.png">
+    </a>
+
+    <label for="checkbox_toggle" class="hamburger gray">&#9776;</label>
+    <input type="checkbox" id="checkbox_toggle"/>
+
+    <ul class="navbar-list">
+        <li class="li-navbar">
+            <a class="home-a gray" href="index.html">HOME</a>
+        </li>
+        <li class="li-navbar">
+            <a class="home-a gray" href="light.html">LIGHT</a>
+        </li>
+        <li class="li-navbar">
+            <a class="active" href="colors.html">COLORS</a>
+        </li>
+        <li class="li-navbar">
+            <a class="home-a gray" href="ideas.html">IDEAS</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="MainPage">
+
+    <img class="color-image" src="imgs/colors1.png">
+    <p class="text-justify medium gray">Color plays a vitally important role in the world in which we live. Color can sway thinking, change actions, and cause reactions. It can irritate or soothe your eyes, raise your blood pressure or suppress your appetite. When used in the right ways, color can even save on energy consumption. As a powerful form of communication, color is irreplaceable.</p>
+    <button  class="bottone" onMouseOver="this.src='aderp.png'"onclick="myFunction()"><img class="bottonePalette" src="imgs/BottonePalette.png" onMouseOver="this.src='imgs/bottone2.png'" onMouseOut="this.src='imgs/BottonePalette.png'"> </button>
+    <img id="myPicture" class="random-image" alt="IMG NON TROVATA" src="imgs/PALETTE/palette (1).png">
+</div>
+
+<script>
+    function myFunction(){
+        let myPix = new Array("imgs/PALETTE/palette (1).png","imgs/PALETTE/palette (2).png","imgs/PALETTE/palette (3).png", "imgs/PALETTE/palette (4).png","imgs/PALETTE/palette (5).png","imgs/PALETTE/palette (6).png","imgs/PALETTE/palette (7).png", "imgs/PALETTE/palette (8).png","imgs/PALETTE/palette (9).png","imgs/PALETTE/palette (10).png","imgs/PALETTE/palette (11).png", "imgs/PALETTE/palette (12).png");
+        let randomNum = Math.floor(Math.random() * myPix.length);
+        document.getElementById("myPicture").src = myPix[randomNum];
+    }
+</script>
+</body>
+</html>

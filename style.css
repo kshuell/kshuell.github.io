@@ -1,0 +1,318 @@
+/* Gestione dei Font e dei colori */
+
+@font-face
+{
+    font-family: "Carilos";
+    src: url("font/carilos (1)/Carilos.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face
+{
+    font-family: "NoeDisplay";
+    src: url("font/Noe Display/NoeDisplay-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #202020;
+    margin: 0;
+    padding: 0;
+}
+
+.body-white{
+    background-color: #E7E5E5;
+    margin: 0;
+    padding: 0;
+}
+
+.gray{
+    color: #898989;
+}
+
+.orpheus{
+    color: #E7E5E5;
+}
+
+.black{
+    color: #202020;
+}
+
+.spacing-top{
+    margin-top: 7%;
+}
+
+.medium{
+    width: 40%;
+}
+
+/* Gestione della Navbar */
+
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox]{
+    display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+}
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    display: inline-block;
+    align-items: center;
+}
+
+.active{
+    color: #E7E5E5;
+}
+
+.active-black{
+    color: black;
+}
+
+.light-a:hover{
+    color: black;
+}
+
+.navbar-list{
+    list-style-type: none;
+    overflow: hidden;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    padding-left: 6%;
+}
+
+/*Questa distinzione mi serve solo per la versione mobile*/
+.navbar-list-light{
+    list-style-type: none;
+    overflow: hidden;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    padding-left: 6%;
+}
+
+.icon{
+    float: left;
+    margin-right: 35%;
+    margin-left: 3.5%;
+    margin-top: 2.8%;
+    width: 25%;
+    height: auto;
+}
+
+.light-icon{
+    float: left;
+    margin-right: 35%;
+    margin-left: 3.5%;
+    margin-top: 2.8%;
+    width: 10%;
+    font-size: 20px;
+    height: auto;
+}
+
+.img-logo{
+    width: 30%;
+    height: auto;
+}
+
+.title-icon{
+    font-size: 30px;
+}
+
+.li-navbar{
+    float: left;
+    margin-right: 2%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+.li-navbar a{
+    text-decoration: none;
+    font-family: NoeDisplay;
+}
+
+.home-a:hover {
+    color: #E2E2E2;
+}
+
+.site-image {
+    width: 50%;
+    margin-top: 5%;
+}
+
+.bottonePalette{
+    width: 50%;
+    height: auto;
+}
+
+.bottone{
+    border: none;
+    margin: 0;
+    padding-top: 0px;
+    padding-left: 0px;
+    width: 35%;
+    object-fit: fill;
+    background-color: transparent;
+}
+
+.random-image{
+    width: 40%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.color-image{
+    width: 70%;
+    height: auto;
+    padding: 0;
+}
+/* Homepage */
+
+.MainPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.text-justify{
+    text-align: justify;
+    font-family: NoeDisplay;
+    font-weight: normal;
+    font-size: 22px;
+    margin-bottom: 10%;
+}
+
+/* Pagina light */
+
+.site-image2{
+    width: 35%;
+    margin-bottom: 5%;
+}
+
+.text-center{
+    text-align: center;
+    font-family: NoeDisplay;
+    font-weight: normal;
+    font-size: 22px;
+    margin-bottom: 10%;
+}
+
+.mySlides{
+    display: none;
+}
+
+/* Pagina ideas */
+
+.site-image3{
+    width: 70%;
+    margin-bottom: 5%;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+    .navbar-list {
+        display:none;
+        position: absolute;
+        background-color:#202020;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .navbar-list-light{
+        display:none;
+        position: absolute;
+        background-color:#E7E5E5;
+        right: 0;
+        left: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    input[type=checkbox]:checked ~ .navbar-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    input[type=checkbox]:checked ~ .navbar-list-light{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: block;
+        margin-top: 3%;
+        padding-left: 300px;
+    }
+
+    .text-justify{
+        font-size: 13px;
+    }
+
+    .text-center{
+        font-size: 13px;
+    }
+
+    .MainPage{
+        margin-top: 10%;
+    }
+
+    .site-image{
+        margin-top: 10%;
+        width: 70%;
+    }
+
+    .site-image2{
+        width: 50%;
+    }
+
+    .site-image3{
+        width: 80%;
+    }
+
+    .medium{
+        margin-top: 10%;
+        width: 70%;
+    }
+
+    .icon{
+        width: 50%;
+        height: auto;
+        margin-top: 4%;
+    }
+
+    .bottone{
+        border: none;
+        margin: 0;
+        padding-top: 0px;
+        padding-left: 0px;
+        width: 70%;
+        object-fit: fill;
+        background-color: transparent;
+    }
+
+    .random-image{
+        width: 80%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+}
